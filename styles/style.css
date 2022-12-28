@@ -1,9 +1,24 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
+/* 숨김 콘텐츠 */ 
+.a11y-hidden{
+  background-color: yellow;
+  position: absolute;
+  /* top: -9999em; */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
+}
+
+html{
+  font-size: 10px;
 }
 
 a{
@@ -16,6 +31,7 @@ a{
 body {
   background: #ffc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: 1.4rem;
 }
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
@@ -26,16 +42,13 @@ body {
 
 /* 헤더 */
 .header{
-  background: pink;
   padding: 0 30px;
-  height: 15vh;
   position: relative;
   border-radius: 0 0 15px 15px;
 }
 
 /* 로고 */ 
 .logo{
-  background-color: blue;
   position: absolute;
   top: 45px;
   left: 60px;
@@ -43,9 +56,11 @@ body {
 
 /* 텍스트 링크 모음 */ 
 .member{
-  background-color: aqua;
   text-align: right;
   padding: 4px 0;
+  /* position: relative; 
+  right: -10px; */
+  transform: translateX(10px);
 }
 
 .member li{
@@ -53,13 +68,20 @@ body {
 }
 
 .member a{
-  background-color: coral;
   padding: 6px 10px;
   display: inherit;
+  text-transform: uppercase;
 }
 
 .divider{
   margin-right: 4px;
+}
+
+/* 메인 메뉴 */ 
+.menu {
+  background: #e85e2c
+    linear-gradient(to bottom, #ef9126 0%, #e85e2c 35%, #e85e2c 70%, #ef9126 100%
+    );
 }
 
 /* 비주얼 */
